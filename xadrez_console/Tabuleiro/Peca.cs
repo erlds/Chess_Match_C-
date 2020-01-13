@@ -17,5 +17,10 @@ namespace tabuleiro
             this.tab = tab;
         }
 
+        public void incrementarQteMovimentos()
+        {
+            qteMovimentos++;
+        }
+
     }
 }

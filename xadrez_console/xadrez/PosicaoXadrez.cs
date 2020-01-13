@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using tabuleiro;
 
-namespace xadrez_console.xadrez
+namespace xadrez
 {
     class PosicaoXadrez
     {
         public int linha { get; set; }
         public char coluna { get; set; }
 
-        public PosicaoXadrez(int linha, char coluna)
+        public PosicaoXadrez(char coluna,int linha)
         {
             this.linha = linha;
             this.coluna = coluna;
