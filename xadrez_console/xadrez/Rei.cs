@@ -4,7 +4,7 @@ namespace xadrez
 {
     class Rei : Peca
     {
-        public Rei(Tabuleiro tab,Cor cor):base(cor,tab)
+        public Rei(Tabuleiro tab,Cor cor):base(tab,cor)
         {
 
         }
@@ -26,7 +26,7 @@ namespace xadrez
             Posicao pos = new Posicao(0, 0);
 
             // Acima
-            pos.definirValores(posicao.linha, posicao.coluna);
+            pos.definirValores(posicao.linha, posicao.coluna+1);
             if (tab.posicaoValida(pos)&& podeMover(pos)){
                 mat[pos.linha, pos.coluna] = true;
             }
