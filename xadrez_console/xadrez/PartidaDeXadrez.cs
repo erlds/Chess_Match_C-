@@ -144,7 +144,20 @@ namespace xadrez
                 desfazMovimento(origem, destino, pecaCapturada);
                 throw new TabuleiroException("Você não pode se colocar em xeque!");
             }
-            
+
+            Peca p = tab.peca(destino);
+
+
+            // Promoção
+            if(p is Peao)
+            {
+                if ((p.cor == Cor.Branca && destino.linha == 0)||(p.cor == Cor.Preta && destino.linha == 7))
+                {
+
+                }
+            }
+
+
             if (estaEmXeque(adversaria(jogadorAtual)))
             {
                 xeque = true;
@@ -163,8 +176,6 @@ namespace xadrez
                 turno++;
                 mudaJogador();
             }
-
-            Peca p = tab.peca(destino);
 
             //En passant
             if (p is Peao && (destino.linha == origem.linha - 2) || destino.linha == destino.linha + 2)
